@@ -1,0 +1,4 @@
+package: github.com/lijiaocn/kube-lb
+import:
+- package: k8s.io/client-go
+  version: ~6.0.0

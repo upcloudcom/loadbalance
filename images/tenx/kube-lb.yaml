@@ -1,0 +1,66 @@
+apiVersion: extensions/v1beta1
+kind: DaemonSet
+metadata:
+  labels:
+    name: kube-lb
+  name: kube-lb
+  namespace: kube-system
+spec:
+  revisionHistoryLimit: 10
+  selector:
+    matchLabels:
+      name: kube-lb
+  template:
+    metadata:
+      annotations:
+        scheduler.alpha.kubernetes.io/affinity: '{"nodeAffinity":{"requiredDuringSchedulingIgnoredDuringExecution":{"nodeSelectorTerms":[{"matchExpressions":[{"key":"role","operator":"In","values":["kube-lb"]}]}]}}}'
+      creationTimestamp: null
+      labels:
+        name: kube-lb
+    spec:
+      containers:
+      - env:
+        - name: NAMESPACE
+          value: ""
+        - name: LOGLEVEL
+          value: "1"
+        image: harbor.enncloud.cn/paas/kube-lb:v1.0
+        imagePullPolicy: Always
+        name: kube-lb
+        resources: {}
+        securityContext:
+          privileged: true
+        terminationMessagePath: /dev/termination-log
+        terminationMessagePolicy: File
+        volumeMounts:
+        - mountPath: /var/run/docker.sock
+          name: docker-sock
+        - mountPath: /etc/tenx/
+          name: kube-config
+        - mountPath: /etc/sslkeys/certs
+          name: kube-certs
+      dnsPolicy: ClusterFirst
+      hostNetwork: true
+      nodeSelector:
+        role: proxy 
+      restartPolicy: Always
+      schedulerName: default-scheduler
+      securityContext: {}
+      terminationGracePeriodSeconds: 30
+      volumes:
+      - emptyDir: {}
+        name: docker-sock
+      - hostPath:
+          path: /var/run/docker.sock
+        name: config-volume
+      - configMap:
+          defaultMode: 420
+          name: kube-config
+        name: kube-config
+      - configMap:
+          defaultMode: 420
+          name: kube-certs
+        name: kube-certs
+  templateGeneration: 9
+  updateStrategy:
+    type: OnDelete
