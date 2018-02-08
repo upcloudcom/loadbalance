@@ -2,10 +2,7 @@
 mkdir /var/lib/haproxy
 mkdir /var/run/haproxy
 
-#./kube-lb -auth=kubeconfig -host=https://10.39.0.105:6443 -kubeconfig=./kubeconfig-105 -skiptls=true -namespace=""  -source=k8s -template=./executor/haproxy/haproxy.tpl -result=_output/result.conf -script=./_output/nothing.sh -filter=k8s_tenx -fconfig=filter/k8s_tenx/extention.conf -executor=haproxy -v=1 -alsologtostderr
-#./kube-lb -auth=kubeconfig -host=https://10.39.0.113:6443 -kubeconfig=./kubeconfig-113 -skiptls=true -namespace=""  -source=k8s -template=./executor/haproxy/haproxy.tpl -result=_output/result.conf -script=./_output/nothing.sh -filter=k8s_tenx -fconfig=filter/k8s_tenx/extention.conf -executor=haproxy -v=1 -alsologtostderr
-./kube-lb -auth=kubeconfig -host=https://10.39.1.62:6443 -kubeconfig=./kubeconfig-62 -skiptls=true -namespace="lijiaob" -v=1 -source=k8s -template=./executor/haproxy/haproxy.tpl -result=./_output/result.conf -script=./_output/nothing.sh -filter=k8s_tenx -fconfig=./filter/k8s_tenx/extention.conf -executor=haproxy  -alsologtostderr
-#./kube-lb -auth=kubeconfig -host=https://10.39.1.62:6443 -kubeconfig=./kubeconfig-62 -skiptls=true -namespace="" -v=1 -source=k8s -template=./executor/haproxy/haproxy.tpl -result=./_output/result.conf -script=./_output/nothing.sh -filter=k8s_tenx -fconfig=./filter/k8s_tenx/extention.conf -executor=haproxy  -alsologtostderr
+./kube-lb -auth=kubeconfig -host=https://10.39.1.62:6443 -kubeconfig=./kubeconfig-62 -skiptls=true -namespace="" -v=1 -source=k8s -template=./images/tenx/haproxy.tpl -result=/etc/haproxy/haproxy.cfg.new -script=./images/tenx/update.sh -filter=k8s_tenx -fconfig=./filter/k8s_tenx/extention.conf -executor=haproxy  -alsologtostderr
 
 #Usage of ./kube-lb:
 #  -alsologtostderr

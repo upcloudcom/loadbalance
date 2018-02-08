@@ -6,7 +6,7 @@ IMAGE=${PREFIX}/kube-lb:${TAG}
 .PHONY: build image push
 
 build:
-	go build
+	CGO_ENABLED=0 go build
 image:
 	cp kube-lb images/tenx/
 	docker build -t ${IMAGE} images/tenx/
