@@ -24,7 +24,7 @@ spec:
           value: ""
         - name: LOGLEVEL
           value: "1"
-        image: harbor.enncloud.cn/paas/kube-lb:v1.0.1
+        image: reg.enncloud.cn/paas/kube-lb:v1.0.1
         imagePullPolicy: Always
         name: kube-lb
         resources: {}

@@ -1,4 +1,4 @@
-//create: 2018/01/18 16:43:46 change: 2018/01/29 19:31:40 lijiaocn@foxmail.com
+//create: 2018/01/18 16:43:46 Change: 2018/02/08 14:40:23 lijiaocn@foxmail.com
 package k8s_tenx
 
 import (
@@ -204,7 +204,7 @@ func serverGroupKey(pod *v1.Pod) (string, error) {
 		return key, nil
 	}
 
-	return "", errors.New(fmt.Sprintf("none of the labels is set on pod %s %s: %s %s %s",
+	return "", errors.New(fmt.Sprintf("none of the labels is set on pod %s %s: %s %s %s %s %s",
 		pod.Namespace, pod.Name, label_lb, label_stateful, label_petset, label_app, label_svc))
 }
 
@@ -242,7 +242,7 @@ func parserListeners(svc *v1.Service) ([]L.Listener, error) {
 	}
 
 	if name == "" {
-		return newListeners, errors.New(fmt.Sprintf("none of these selector is set on %s %s: %s %s %s",
+		return newListeners, errors.New(fmt.Sprintf("none of these selector is set on %s %s: %s %s %s %s %s",
 			svc.Namespace, svc.Name, label_lb, label_stateful, label_petsetName, label_appName, label_svcName))
 	}
 
