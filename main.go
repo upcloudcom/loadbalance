@@ -1,4 +1,4 @@
-//create: 2018/01/02 18:25:55 change: 2018/02/06 19:43:35 lijiaocn@foxmail.com
+//create: 2018/01/02 18:25:55 Change: 2018/02/08 19:00:40 lijiaocn@foxmail.com
 package main
 
 import (
@@ -122,7 +122,7 @@ func main() {
 			glog.Exitln("kube source add UPDATE filter fail: ", err.Error())
 		}
 		if cmdline.FilterConfig != "" {
-			go k8s_tenx.WatchConfig(cmdline.FilterConfig, 1)
+			go k8s_tenx.WatchConfig(cmdline.FilterConfig, 1*time.Second)
 		}
 	default:
 		glog.Exitln("unknown source: ", cmdline.Source)
