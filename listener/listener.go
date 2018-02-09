@@ -1,4 +1,4 @@
-//create: 2018/01/03 16:24:59 change: 2018/01/26 20:32:25 lijiaocn@foxmail.com
+//create: 2018/01/03 16:24:59 Change: 2018/02/09 16:25:00 lijiaocn@foxmail.com
 package listener
 
 import (
@@ -97,7 +97,7 @@ func (self *Listeners) List() []Listener {
 				continue
 			} else {
 				for _, v := range *smap {
-					glog.V(1).Infof("use server: %s %s", key, v.Name)
+					glog.V(2).Infof("use server: %s %s", key, v.Name)
 					sg.Servers = append(sg.Servers, v)
 				}
 			}
