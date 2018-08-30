@@ -1,9 +1,8 @@
-//create: 2018/01/02 19:41:47 change: 2018/01/18 13:53:36 lijiaocn@foxmail.com
 package client
 
 import (
 	"github.com/golang/glog"
-	"github.com/lijiaocn/kube-lb/config"
+	"github.com/upcloudcom/loadbalance/config"
 	"k8s.io/apimachinery/pkg/runtime/schema"
 	"k8s.io/apimachinery/pkg/runtime/serializer"
 	"k8s.io/client-go/kubernetes/scheme"

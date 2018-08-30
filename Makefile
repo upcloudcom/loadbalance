@@ -8,10 +8,10 @@ IMAGE=${PREFIX}/kube-lb:${TAG}
 build:
 	CGO_ENABLED=0 go build
 image:
-	cp kube-lb images/tenx/
+	cp loadbalance images/tenx/
 	docker build -t ${IMAGE} images/tenx/
-	rm images/tenx/kube-lb
+	rm images/tenx/loadbalance
 push:
 	docker push ${IMAGE}
 clean:
-	rm kube-lb
+	rm loadbalance

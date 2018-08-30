@@ -1,16 +1,15 @@
-//create: 2018/01/02 18:25:55 Change: 2018/02/08 19:00:40 lijiaocn@foxmail.com
 package main
 
 import (
 	"flag"
 	"github.com/golang/glog"
-	"github.com/lijiaocn/kube-lb/client"
-	"github.com/lijiaocn/kube-lb/config"
-	"github.com/lijiaocn/kube-lb/executor"
-	"github.com/lijiaocn/kube-lb/executor/haproxy"
-	"github.com/lijiaocn/kube-lb/filter/k8s_tenx"
-	"github.com/lijiaocn/kube-lb/source"
-	"github.com/lijiaocn/kube-lb/source/k8s"
+	"github.com/upcloudcom/loadbalance/client"
+	"github.com/upcloudcom/loadbalance/config"
+	"github.com/upcloudcom/loadbalance/executor"
+	"github.com/upcloudcom/loadbalance/executor/haproxy"
+	"github.com/upcloudcom/loadbalance/filter/k8s_tenx"
+	"github.com/upcloudcom/loadbalance/source"
+	"github.com/upcloudcom/loadbalance/source/k8s"
 	"k8s.io/api/core/v1"
 	"os"
 	os_exec "os/exec"

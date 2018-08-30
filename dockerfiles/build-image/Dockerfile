@@ -18,7 +18,7 @@ RUN rm /bin/grep && ln -s /usr/bin/grep /bin/grep
 RUN ln -snf /usr/share/zoneinfo/Asia/Shanghai /etc/localtime
 RUN go get github.com/tools/godep
 
-ENV HOME /go/src/github.com/lijiaocn
+ENV HOME /go/src/github.com/upcloudcom
 RUN mkdir -p $HOME
 
 ADD rsyncd.password /

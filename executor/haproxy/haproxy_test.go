@@ -1,10 +1,10 @@
-//create: 2018/01/08 14:24:45 change: 2018/01/11 14:28:05 lijiaocn@foxmail.com
+//create: 2018/01/08 14:24:45 change: 2018/01/11 14:28:05 upcloudcom@foxmail.com
 package haproxy
 
 import (
 	"fmt"
 	_ "github.com/golang/glog"
-	L "github.com/lijiaocn/kube-lb/listener"
+	L "github.com/upcloudcom/loadbalance/listener"
 	"testing"
 )
 

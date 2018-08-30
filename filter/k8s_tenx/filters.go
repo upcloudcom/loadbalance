@@ -1,12 +1,12 @@
-//create: 2018/01/18 16:43:46 Change: 2018/02/08 14:40:23 lijiaocn@foxmail.com
+//create: 2018/01/18 16:43:46 Change: 2018/02/08 14:40:23 upcloudcom@foxmail.com
 package k8s_tenx
 
 import (
 	"errors"
 	"fmt"
 	"github.com/golang/glog"
-	"github.com/lijiaocn/kube-lb/filter"
-	L "github.com/lijiaocn/kube-lb/listener"
+	"github.com/upcloudcom/loadbalance/filter"
+	L "github.com/upcloudcom/loadbalance/listener"
 	"k8s.io/api/core/v1"
 	"reflect"
 	"strconv"

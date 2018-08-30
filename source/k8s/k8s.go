@@ -1,11 +1,11 @@
-//create: 2018/01/12 13:17:01 change: 2018/01/24 16:47:51 lijiaocn@foxmail.com
+//create: 2018/01/12 13:17:01 change: 2018/01/24 16:47:51 upcloudcom@foxmail.com
 package k8s
 
 import (
 	"errors"
 	"github.com/golang/glog"
-	"github.com/lijiaocn/kube-lb/filter"
-	L "github.com/lijiaocn/kube-lb/listener"
+	"github.com/upcloudcom/loadbalance/filter"
+	L "github.com/upcloudcom/loadbalance/listener"
 	"k8s.io/api/core/v1"
 	"k8s.io/apimachinery/pkg/fields"
 	"k8s.io/client-go/kubernetes"

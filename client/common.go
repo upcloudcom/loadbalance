@@ -1,9 +1,8 @@
-//create: 2018/01/02 19:56:37 change: 2018/01/03 16:05:14 lijiaocn@foxmail.com
 package client
 
 import (
 	"errors"
-	"github.com/lijiaocn/kube-lb/config"
+	"github.com/upcloudcom/loadbalance/config"
 	"k8s.io/client-go/rest"
 	"k8s.io/client-go/tools/clientcmd"
 )

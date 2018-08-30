@@ -12,7 +12,7 @@ DATA_CONTAINER="${PROJECT_NAME}-data"
 RSYNC_CONTAINER="${PROJECT_NAME}-rsync"
 BUILD_CONTAINER="${PROJECT_NAME}-build"
 
-REMOTE_ROOT=/go/src/github.com/lijiaocn/kube-lb/ # workdir in docker
+REMOTE_ROOT=/go/src/github.com/upcloudcom/loadbalance/ # workdir in docker
 
 USER_ID=$(id -u)
 GROUP_ID=$(id -g)

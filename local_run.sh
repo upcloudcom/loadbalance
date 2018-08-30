@@ -2,9 +2,9 @@
 mkdir /var/lib/haproxy
 mkdir /var/run/haproxy
 
-./kube-lb -auth=kubeconfig -host=https://10.39.1.62:6443 -kubeconfig=./kubeconfig-62 -skiptls=true -namespace="" -v=1 -source=k8s -template=./images/tenx/haproxy.tpl -result=/etc/haproxy/haproxy.cfg.new -script=./images/tenx/update.sh -filter=k8s_tenx -fconfig=./filter/k8s_tenx/extention.conf -executor=haproxy  -alsologtostderr
+./loadbalance -auth=kubeconfig -host=https://10.39.1.62:6443 -kubeconfig=./kubeconfig-62 -skiptls=true -namespace="" -v=1 -source=k8s -template=./images/tenx/haproxy.tpl -result=/etc/haproxy/haproxy.cfg.new -script=./images/tenx/update.sh -filter=k8s_tenx -fconfig=./filter/k8s_tenx/extention.conf -executor=haproxy  -alsologtostderr
 
-#Usage of ./kube-lb:
+#Usage of ./loadbalance:
 #  -alsologtostderr
 #    	log to standard error as well as files
 #  -auth string

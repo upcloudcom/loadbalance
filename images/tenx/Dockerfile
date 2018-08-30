@@ -12,7 +12,7 @@ ADD ./haproxy.tpl /etc/default/hafolder/haproxy.tpl
 ADD ./default.pem /etc/sslkeys/default.pem
 ADD ./503.http /etc/haproxy/errors/503.http
 
-ADD ./kube-lb /kube-lb
+ADD ./loadbalance /loadbalance
 
 ADD ./update.sh /update.sh
 ADD ./run.sh /run.sh

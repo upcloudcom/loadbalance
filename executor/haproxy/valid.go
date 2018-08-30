@@ -1,11 +1,11 @@
-//create: 2018/01/04 16:46:04 change: 2018/01/25 14:00:24 lijiaocn@foxmail.com
+//create: 2018/01/04 16:46:04 change: 2018/01/25 14:00:24 upcloudcom@foxmail.com
 package haproxy
 
 import (
 	"errors"
 	"fmt"
 	"github.com/golang/glog"
-	L "github.com/lijiaocn/kube-lb/listener"
+	L "github.com/upcloudcom/loadbalance/listener"
 )
 
 func checkProto(l *L.Listener) error {
